@@ -1,7 +1,9 @@
-<div class="news-list">
-  <owl-carousel-o [options]="customOptions">
-    <ng-template carouselSlide *ngFor="let items of pageItems">
-      <app-news *ngFor="let news of items.items" [news]="news" />
-    </ng-template>
-  </owl-carousel-o>
-</div>
+<app-layout>
+  <div class="news-list">
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide *ngFor="let items of pageItems">
+        <app-news *ngFor="let news of items.items" [news]="news" />
+      </ng-template>
+    </owl-carousel-o>
+  </div>
+</app-layout>
