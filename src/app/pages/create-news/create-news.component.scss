@@ -1,0 +1,44 @@
+.form__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+}
+
+form.form {
+  width: 350px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 15px;
+
+  > label {
+    margin-bottom: 3px;
+  }
+
+  > input,
+  > textarea {
+    padding: 8px 5px;
+  }
+}
+
+.submit-btn {
+  cursor: pointer;
+  width: 100%;
+  padding: 8px 5px;
+
+  border: none;
+  border-radius: 2px;
+
+  background-color: #494949;
+
+  color: #e4e4e4;
+
+  &:hover {
+    background-color: #5f5f5f;
+  }
+}

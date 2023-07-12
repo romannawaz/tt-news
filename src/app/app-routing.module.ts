@@ -13,6 +13,13 @@ const routes: Routes = [
       import('./pages/news/news.module').then((m) => m.NewsModule),
   },
   {
+    path: 'create-news',
+    loadChildren: () =>
+      import('./pages/create-news/create-news.module').then(
+        (m) => m.CreateNewsModule
+      ),
+  },
+  {
     path: '**',
     pathMatch: 'full',
     redirectTo: 'home',
