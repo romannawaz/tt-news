@@ -19,7 +19,11 @@ export class NewsService {
 
   getById(id: string): Observable<INews> {
     return this.http
-      .get<INews[]>(this.newsUrl, { params: { ID: id } })
+      .get<INews[]>(this.newsUrl, { params: { id } })
       .pipe(map(([news]) => news));
+  }
+
+  createNews(news: INews): Observable<INews> {
+    return this.http.post<INews>(this.newsUrl, news);
   }
 }

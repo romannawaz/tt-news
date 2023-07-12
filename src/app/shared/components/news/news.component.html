@@ -1,4 +1,4 @@
-<div class="img" [routerLink]="['/news', news.ID]">
+<div class="img" [routerLink]="['/news', news.id]">
   <img [src]="news.imageSmall" />
 </div>
 <div class="desc">
@@ -13,7 +13,7 @@
       {{ news.viewCount }}
     </div>
   </div>
-  <div class="title" [routerLink]="['/news', news.ID]">{{ news.title }}</div>
+  <div class="title" [routerLink]="['/news', news.id]">{{ news.title }}</div>
   <div class="tags">
     <a href="#" *ngFor="let tag of news.tags">{{ tag.title }}</a>
   </div>
