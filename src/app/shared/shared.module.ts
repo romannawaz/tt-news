@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -9,7 +10,7 @@ const Components = [NewsComponent];
 
 @NgModule({
   declarations: [...Components],
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [CommonModule, RouterModule, FontAwesomeModule],
   exports: [...Components],
 })
 export class SharedModule {}
