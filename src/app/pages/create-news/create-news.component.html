@@ -1,16 +1,37 @@
 <app-layout>
   <div class="form__wrapper">
-    <form class="form">
+    <form class="form" [formGroup]="newsForm" (ngSubmit)="createNews()">
       <div class="form-field">
         <label for="title">Title</label>
-        <input type="text" id="title" placeholder="Title" />
+        <input
+          type="text"
+          id="title"
+          placeholder="Title"
+          formControlName="title"
+        />
       </div>
       <div class="form-field">
         <label for="description">Description</label>
-        <textarea id="description" placeholder="Description"></textarea>
+        <textarea
+          id="description"
+          placeholder="Description"
+          formControlName="description"
+        ></textarea>
       </div>
       <div>
-        <button type="submit" class="submit-btn">Create</button>
+        <button type="submit" class="submit-btn">
+          Create
+          <fa-icon
+            *ngIf="createdSuccess"
+            [icon]="faCheck"
+            style="color: rgb(54, 242, 54)"
+          ></fa-icon>
+          <fa-icon
+            *ngIf="createdFailure"
+            [icon]="faXMark"
+            style="color: rgb(255, 60, 60)"
+          ></fa-icon>
+        </button>
       </div>
     </form>
   </div>
