@@ -8,6 +8,11 @@ const routes: Routes = [
       import('./pages/home/home.module').then((m) => m.HomeModule),
   },
   {
+    path: 'news',
+    loadChildren: () =>
+      import('./pages/news/news.module').then((m) => m.NewsModule),
+  },
+  {
     path: '**',
     pathMatch: 'full',
     redirectTo: 'home',
